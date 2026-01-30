@@ -1,5 +1,5 @@
 let student={
-    sno:01,
+    sno: 1,
     name:"joe",
     age:20
 }
