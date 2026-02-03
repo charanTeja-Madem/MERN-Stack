@@ -1,0 +1,28 @@
+GET http://localhost:3000/products-api/products
+###
+POST http://localhost:3000/products-api/products
+Content-Type: application/json
+
+{
+    "ProductName":"Laptop",
+    "Price":75000,
+    "brand":"Dell"
+}
+###
+GET http://localhost:3000/users-api/users
+###
+POST http://localhost:3000/users-api/users
+Content-Type: application/json
+
+{
+    "name":"Charan",
+    "email":"madem",
+    "password":"Charan@319",
+    "cart":[]
+}
+####delete all users
+DELETE http://localhost:3000/users-api/users
+####read user by id
+GET http://localhost:3000/users-api/user/698188dda3adfc9f15707945
+####cart operations
+PUT http://localhost:3000/users-api/user-cart/userid/698188dda3adfc9f15707945/product-id/69808ccd5aaf5d2644136a6c
