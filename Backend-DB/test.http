@@ -1,0 +1,60 @@
+###
+GET http://localhost:3000/user-api/users
+### read user by objectid ,objectid is unique and created automatically by mongoose 
+GET http://localhost:3000/user-api/users/697dba4cf2b1b2c3cc93e990
+
+
+###
+POST http://localhost:3000/user-api/users
+Content-Type: application/json
+
+{
+    "username":"charan",
+    "password":"123456",
+    "age":20
+}
+
+### update user by objectid
+PUT http://localhost:3000/user-api/users/697dba4cf2b1b2c3cc93e990 
+Content-Type: application/json
+
+{
+    "username":"mahesh_mk",
+    "password":"mahesh@123456",
+    "age":22
+
+}
+
+### delete user by objectid
+DELETE http://localhost:3000/user-api/users/697dba4cf2b1b2c3cc93e990
+###
+DELETE http://localhost:3000/user-api/users/
+###------------------------------------------------------------
+###GET products
+GET http://localhost:3000/product-api/products
+
+###Post 
+POST http://localhost:3000/product-api/products
+Content-Type: application/json
+
+{
+    "pid":"2333444",
+    "productName":"Ammmmm",
+    "price":2000
+}
+
+### get product by objectid
+GET http://localhost:3000/product-api/products/697e351debdcb0b4934641ea
+
+### update product by objectid
+PUT http://localhost:3000/product-api/products/697e351debdcb0b4934641ea
+Content-Type: application/json
+
+{
+    "pid":"23eg58",
+    "productName":"Ammmmm",
+    "price":2000
+}
+
+### get products by pid
+GET http://localhost:3000/product-api/products/pid/23eg58

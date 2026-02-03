@@ -1,0 +1,19 @@
+GET http://localhost:3000/products
+####
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "id":123,
+    "name":"mobile",
+    "price":50000,
+    "brand":"samsung"
+}
+####
+PUT http://localhost:3000/products
+####
+DELETE http://localhost:3000/products
+####
+GET http://localhost:3000/products/123
+####
+GET http://localhost:3000/products/"samsung"
