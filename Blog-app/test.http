@@ -1,0 +1,115 @@
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "firstName":"charan",
+    "email":"abc",
+    "password":"charan"
+}
+###
+POST http://localhost:4000/common-api/login
+Content-Type: application/json
+
+{
+    "email":"abcd",
+    "password":"charan"
+}
+### logout
+POST http://localhost:4000/common-api/logout
+
+### read all articles
+GET http://localhost:4000/user-api/articles
+### add comment to article
+POST http://localhost:4000/user-api/articles/comments
+Content-Type: application/json
+
+{
+    "articleId":"6989999a7b6c70662b71533d",
+    "comment":"this is a comment"
+}
+### create author
+POST http://localhost:4000/author-api/users
+Content-Type: application/json
+
+{
+    "firstName":"charan",
+    "email":"abcd",
+    "password":"charan"
+}
+### authenticate author
+POST http://localhost:4000/author-api/login
+Content-Type: application/json
+
+{
+    "email":"abcd",
+    "password":"charan",
+    "role":"author"
+}
+###create article
+POST http://localhost:4000/author-api/articles
+Content-Type: application/json
+
+{
+    "title":"first article",
+    "content":"this is my first article",
+    "author":"69897f1e5497139057667cfd",
+    "category":"technology"
+}
+###update article from params
+PUT http://localhost:4000/author-api/articles/69897f1e5497139057667cfd
+Content-Type: application/json
+
+{
+    "title":"first article updated",
+    "content":"this is my first article updated",
+        "category":"technology"
+}
+###  read article by id
+GET http://localhost:4000/author-api/articles/69897f1e5497139057667cfd
+
+#### soft delete article
+DELETE http://localhost:4000/author-api/articles/6989999a7b6c70662b71533d
+#### update article from body
+PUT http://localhost:4000/author-api/articles
+Content-Type: application/json
+
+{
+    "author":"69897f1e5497139057667cfd",
+    "articleId":"6989999a7b6c70662b71533d",
+    "title":"first article updated",
+    "content":"this is my first article updated",
+        "category":"technology"
+}
+
+
+###test res
+GET http://localhost:4000/test
+
+
+
+
+###admin block users
+PUT http://localhost:4000/admin-api/blockUsers
+Content-Type: application/json
+
+{
+    "userId":"69897f1e5497139057667cfd"
+}
+
+###admin unblock users
+PUT http://localhost:4000/admin-api/unblockUsers
+Content-Type: application/json
+
+{
+    "userId":"69897f1e5497139057667cfd"
+}
+
+####change password
+POST  http://localhost:4000/common-api/changePassword
+Content-Type: application/json
+
+{
+    "email":"abcd",
+    "oldPassword":"charan123",
+    "newPassword":"charan123"
+}
